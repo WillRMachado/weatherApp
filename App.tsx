@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-// import LoginNavigation from './src/navigation/routes';
+import LoginNavigation from './src/navigation/routes';
 import {PersistGate} from 'redux-persist/integration/react';
 import {Provider} from 'react-redux';
 import reducersStore, {persistor} from './src/store';
@@ -11,9 +11,9 @@ export default function App() {
     <Provider store={reducersStore}>
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>
-          {/* <LoginNavigation /> */}
+          <LoginNavigation />
 
-          <Hello />
+          {/* <Hello /> */}
         </NavigationContainer>
       </PersistGate>
     </Provider>

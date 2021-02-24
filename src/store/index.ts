@@ -3,7 +3,7 @@ import {persistStore, persistReducer} from 'redux-persist';
 import AsyncStorage from '@react-native-community/async-storage';
 import thunk from 'redux-thunk';
 
-import stockReducer from './counter/counter.store';
+import stockReducer from './reducers/rootReducer';
 
 const persistConfig = {
   key: 'root',
@@ -11,11 +11,6 @@ const persistConfig = {
 };
 
 const persistedReducer = persistReducer(persistConfig, stockReducer);
-
-// const composeEnhancers =
-//   typeof window === 'object' && window['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__']
-//     ? window['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__']({})
-//     : compose;
 
 const middlewares = [];
 
@@ -28,11 +23,13 @@ const reducersStore = configureStore({
   reducer: {
     store: persistedReducer,
   },
-  //   enhancers: [composeEnhancers],
+
   middleware: [thunk, ...middlewares],
 });
 
 let persistor = persistStore(reducersStore);
+// uncomment for debugging
+// persistor.purge()
 
 export type RootState = ReturnType<typeof reducersStore.getState>;
 

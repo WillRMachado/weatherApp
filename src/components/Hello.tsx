@@ -1,22 +1,22 @@
 import React from 'react';
 import {View, TouchableOpacity, Text} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import {
-  decrement,
-  increment,
-  asyncIncrement,
-} from '../store/counter/counter.store';
+// import {
+//   decrement,
+//   increment,
+//   asyncIncrement,
+// } from '../store/reducers/awdawdcounter.store';
 
 // import { Container } from './styles';
 
 const Hello: React.FunctionComponent = () => {
-  const sel = useSelector((state: any) => state.store);
+  // const sel = useSelector((state: any) => state.store);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   return (
     <View>
-      <Text testID="myTestId">{sel?.counter}</Text>
+      {/* <Text testID="myTestId">{sel?.counter}</Text>
       <TouchableOpacity
         onPress={() => {
           dispatch(increment(5));
@@ -35,7 +35,7 @@ const Hello: React.FunctionComponent = () => {
           dispatch(decrement());
         }}>
         <Text>minus</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 };
