@@ -1,4 +1,4 @@
-import {saveWeatherData} from '../weather';
+import {saveWeatherData} from '..';
 import store from '../../../index';
 import apiReturn from '../mocks/apiReturn.json';
 import updatedStateMock from '../mocks/updatedState.json';

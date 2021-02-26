@@ -14,6 +14,7 @@ const initialStore = {
     sunset: undefined,
     icon: undefined,
     main: undefined,
+    isDark: false,
   },
   forecast: forecastArray,
 };

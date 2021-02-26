@@ -19,6 +19,7 @@ const weather = createSlice({
       sunset: undefined,
       icon: undefined,
       main: undefined,
+      isDark: false,
     },
     forecast: forecastArray,
   },
@@ -41,6 +42,7 @@ const weather = createSlice({
       stateCurrent.sunset = actionCurrent?.sunset || undefined;
       stateCurrent.icon = actionCurrent?.weather[0]?.icon || undefined;
       stateCurrent.main = actionCurrent?.weather[0]?.main || undefined;
+      stateCurrent.isDark = actionCurrent?.uvi === 0 ? true : false;
 
       if (Array.isArray(action.payload.daily)) {
         const actionForecastData = action.payload.daily.map(
@@ -68,7 +70,7 @@ const asyncGetWeather = (lat: string, lon: string): Function => {
     dispatch(_loading());
     const result = await getWeatherOneCall(lat, lon);
     if (result.status === 200) {
-      dispatch(saveWeatherData(result));
+      dispatch(saveWeatherData(result.data));
     } else {
       dispatch(_errorFetchingData());
     }

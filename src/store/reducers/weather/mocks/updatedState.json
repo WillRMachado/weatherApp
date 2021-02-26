@@ -6,7 +6,8 @@
     "sunrise": 1614157185,
     "sunset": 1614202798,
     "icon": "01n",
-    "main": "Clear"
+    "main": "Clear",
+    "isDark": true
   },
   "forecast": [
     {"time": 1614178800, "icon": "10d", "main": "Rain"},
