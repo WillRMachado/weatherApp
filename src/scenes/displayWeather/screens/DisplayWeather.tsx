@@ -1,15 +1,25 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, PermissionsAndroid} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  PermissionsAndroid,
+  Image,
+} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import LinearGradient from 'react-native-linear-gradient';
 
 import {asyncGetWeather} from '../../../store/reducers/weather';
-
+import {
+  responsiveHeight,
+  responsiveWidth,
+  responsiveFontSize,
+} from 'react-native-responsive-dimensions';
 import {useTheme} from '@react-navigation/native';
 
-import styles from '../../../styles';
+import styles, {measures} from '../../../styles';
 import Geolocation from 'react-native-geolocation-service';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 // const aaa = async (params) => {
 //   try {
 //     const granted = await PermissionsAndroid.request(
@@ -42,19 +52,28 @@ import Geolocation from 'react-native-geolocation-service';
 
 const DisplayWeather: React.FunctionComponent = () => {
   const dispatch = useDispatch();
-  const sel = useSelector((state: any) => state.store.weather);
-  // console.log(JSON.stringify(sel));
+  const icon = useSelector((state: any) => state.store.weather.current.icon);
+  // console.log(sel);
   const {colors, dark} = useTheme();
 
   // console.log(dark, colors);
   return (
-    <View style={{backgroundColor: colors.primary}}>
-      <TouchableOpacity
+    <View style={styles.structure.container}>
+      {/* <TouchableOpacity
         onPress={() => dispatch(asyncGetWeather('-23.533773', '-46.625290'))}>
         <Text>display</Text>
         <Text>display</Text>
         <Text>display</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+      <Icon name="rocket" size={30} color="#900" />
+      <Image
+        style={{
+          width: measures.adjustedScreenWidth,
+          height: measures.adjustedScreenHeight,
+        }}
+        resizeMode="contain"
+        source={{uri: `http://openweathermap.org/img/wn/${icon}@2x.png`}}
+      />
     </View>
   );
 };
