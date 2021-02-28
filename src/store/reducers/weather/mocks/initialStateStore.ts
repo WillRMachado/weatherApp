@@ -9,7 +9,7 @@ const initialStore = {
   errorFetchingData: false,
   lastUpdated: undefined,
   current: {
-    time: 0,
+    time: undefined,
     sunrise: undefined,
     sunset: undefined,
     icon: undefined,

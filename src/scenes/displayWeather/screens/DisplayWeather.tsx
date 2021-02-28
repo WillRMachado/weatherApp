@@ -20,6 +20,9 @@ import {useTheme} from '@react-navigation/native';
 import styles, {measures} from '../../../styles';
 import Geolocation from 'react-native-geolocation-service';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
+import WeatherStripe from '../../../components/weatherStripe/WeatherStripe';
+
 // const aaa = async (params) => {
 //   try {
 //     const granted = await PermissionsAndroid.request(
@@ -51,29 +54,42 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 // aaa();
 
 const DisplayWeather: React.FunctionComponent = () => {
-  const dispatch = useDispatch();
-  const icon = useSelector((state: any) => state.store.weather.current.icon);
+  // const dispatch = useDispatch();
+  // const icon = useSelector((state: any) => state.store.weather.current.icon);
+  const sevenDaysForecast = useSelector(
+    (state: any) => state.store.weather.forecast,
+  );
   // console.log(sel);
-  const {colors, dark} = useTheme();
+  // const {colors, dark} = useTheme();
+  // console.log(sevenDaysForecast);
 
   // console.log(dark, colors);
   return (
-    <View style={styles.structure.container}>
+    <View
+      style={
+        (styles.structure.container,
+        {
+          flexDirection: 'row',
+          height: measures.responsiveHeight,
+          paddingBottom: 20,
+          alignItems: 'flex-end',
+        })
+      }>
       {/* <TouchableOpacity
         onPress={() => dispatch(asyncGetWeather('-23.533773', '-46.625290'))}>
         <Text>display</Text>
         <Text>display</Text>
         <Text>display</Text>
       </TouchableOpacity> */}
-      <Icon name="rocket" size={30} color="#900" />
-      <Image
+      {/* <Image
         style={{
           width: measures.adjustedScreenWidth,
           height: measures.adjustedScreenHeight,
         }}
         resizeMode="contain"
         source={{uri: `http://openweathermap.org/img/wn/${icon}@2x.png`}}
-      />
+      /> */}
+      <WeatherStripe weatherList={sevenDaysForecast} />
     </View>
   );
 };

@@ -1,7 +1,8 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {getWeatherOneCall} from '../../../service/weather';
+import {weatherListType} from '../../../shared/types/weather';
 
-const forecastArray = Array(7).fill({
+const forecastArray: weatherListType = Array(7).fill({
   time: undefined,
   icon: undefined,
   main: undefined,
@@ -14,7 +15,7 @@ const weather = createSlice({
     errorFetchingData: false,
     lastUpdated: undefined,
     current: {
-      time: 0,
+      time: undefined,
       sunrise: undefined,
       sunset: undefined,
       icon: undefined,

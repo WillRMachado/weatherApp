@@ -4,7 +4,7 @@ import MainNavigator from './src/navigation/routes';
 import {PersistGate} from 'redux-persist/integration/react';
 import {Provider} from 'react-redux';
 import reducersStore, {persistor} from './src/store';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {StatusBar} from 'react-native';
 
 import {darkTheme, lightTheme} from './src/styles';
