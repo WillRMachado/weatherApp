@@ -1,5 +1,5 @@
 import React from 'react';
-import Hello from '../components/Hello';
+import Hello from '../components/_Hello';
 import DisplayWeather from '../scenes/displayWeather/screens/DisplayWeather';
 import HOCWeatherWrapper from '../scenes/displayWeather/HOCWeatherWrapper';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';

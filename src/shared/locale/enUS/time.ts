@@ -1,7 +1,7 @@
 import {timeType} from '../_languageTypes/time';
 
 const time: timeType = {
-  day: 'dayh',
+  day: 'day',
   hours: 'hours',
   minutes: 'minutes',
   month: 'month',

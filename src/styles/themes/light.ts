@@ -1,4 +1,6 @@
-const lightTheme = {
+import {themesType} from './themesType';
+
+const lightTheme: themesType = {
   dark: false,
   colors: {
     primary: 'rgb(247, 198, 49)', //obligatory
@@ -10,6 +12,7 @@ const lightTheme = {
 
     secondary: 'rgb(255, 117, 48)',
     tertiary: 'rgb(255, 45, 85)',
+    semitransparentBackground: 'rgba(0, 0, 0, 0.3)',
   },
 };
 

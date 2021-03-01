@@ -10,7 +10,6 @@
     "isDark": true
   },
   "forecast": [
-    {"time": 1614178800, "icon": "10d", "main": "Rain"},
     {"time": 1614265200, "icon": "10d", "main": "Rain"},
     {"time": 1614351600, "icon": "10d", "main": "Rain"},
     {"time": 1614438000, "icon": "10d", "main": "Rain"},

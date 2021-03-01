@@ -46,6 +46,8 @@ const weather = createSlice({
       stateCurrent.isDark = actionCurrent?.uvi === 0 ? true : false;
 
       if (Array.isArray(action.payload.daily)) {
+        //API returns forecast from current day,  we dont need it
+        action.payload.daily.shift();
         const actionForecastData = action.payload.daily.map(
           (forecastDay: object) => {
             return {

@@ -5,6 +5,7 @@ import networkCaller from './client/networkCaller';
 
 // const instance = axiosInstance('https://api.openweathermap.org/data/2.5/');
 const baseUrl = 'https://api.openweathermap.org/data/2.5/';
+const baseIconUrl = 'http://openweathermap.org/img/wn/';
 
 const getWeatherOneCall = async (lat: string, lon: string) => {
   // this is a free key with limitation on the server
@@ -24,4 +25,10 @@ const getWeatherOneCall = async (lat: string, lon: string) => {
   return await networkCaller(baseUrl, requestData);
 };
 
-export {getWeatherOneCall};
+const iconUrl = (iconName: string, smallSize?: boolean) => {
+  const sizeModifier: string = !smallSize ? '@2x' : '';
+
+  return `${baseIconUrl}${iconName}${sizeModifier}.png`;
+};
+
+export {getWeatherOneCall, iconUrl};

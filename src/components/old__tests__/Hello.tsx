@@ -3,7 +3,7 @@ import screenSnapshotCreator from '../../../jestHelpers/screenSnapshotCreator';
 import screenRender from '../../../jestHelpers/screenRender';
 import {act} from 'react-test-renderer';
 
-import Hello from '../Hello';
+import Hello from '../_Hello';
 
 it('renders correctly with defaults', async () => {
   const screen = screenSnapshotCreator(Hello);

@@ -1,10 +1,9 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, PermissionsAndroid} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useTheme} from '@react-navigation/native';
 
 const HOCWeatherWrapper: React.FunctionComponent = (props) => {
-  const {colors, dark} = useTheme();
+  const {colors} = useTheme();
 
   return (
     <LinearGradient

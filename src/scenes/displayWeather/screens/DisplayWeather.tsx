@@ -54,7 +54,7 @@ import WeatherStripe from '../../../components/weatherStripe/WeatherStripe';
 // aaa();
 
 const DisplayWeather: React.FunctionComponent = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // const icon = useSelector((state: any) => state.store.weather.current.icon);
   const sevenDaysForecast = useSelector(
     (state: any) => state.store.weather.forecast,
@@ -64,6 +64,7 @@ const DisplayWeather: React.FunctionComponent = () => {
   // console.log(sevenDaysForecast);
 
   // console.log(dark, colors);
+  console.log(sevenDaysForecast.length);
   return (
     <View
       style={

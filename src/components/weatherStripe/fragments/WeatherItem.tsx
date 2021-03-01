@@ -1,10 +1,12 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-
+import {View, StyleSheet} from 'react-native';
 import {weatherItemType} from '../../../shared/types/weather';
-import {TouchableOpacity} from 'react-native-gesture-handler';
-
-import TranslatedText from '../../translateText/TranslateText';
+import TranslateDate from '../../translate/TranslateDate';
+import {measures} from '../../../styles/index';
+import {useTheme} from '@react-navigation/native';
+import ImageLoader from '../../imageLoader/ImageUriLoader';
+import {themeColorsTypes} from '../../../styles/themes/themesType';
+import {iconUrl} from '../../../service/weather';
 
 export interface displayItemType {
   index: number;
@@ -13,27 +15,44 @@ export interface displayItemType {
 
 const WeatherItem = (props: {weatherUnity: displayItemType}) => {
   const {weatherUnity} = props;
-  console.log('render');
-  const day = new Date(0);
-  day.setUTCSeconds(weatherUnity.item.time);
+  const {colors}: themeColorsTypes = useTheme();
+  const styles = dynamicStyles(colors, weatherUnity.index);
 
   return (
-    <View
-      style={{
-        width: 100,
-        height: 100,
-        backgroundColor: '#00000050',
-        borderRadius: 10,
-        marginLeft: weatherUnity.index === 0 ? 0 : 10,
-      }}>
-      <TranslatedText string={'time.day'} style={{backgroundColor: 'green'}} />
-
-      {/* <Text>{weatherUnity.item.main}</Text>
-      <Text>{weatherUnity.item.icon}</Text>
-      <Text>{weatherUnity.item.time}</Text> */}
-      {/* <Text>{label + language}</Text> */}
+    <View style={styles.box}>
+      <ImageLoader
+        imageUri={iconUrl(weatherUnity.item.icon)}
+        style={styles.iconContainer}
+      />
+      <TranslateDate ms={weatherUnity.item.time} style={styles.dateText} />
     </View>
   );
 };
 
 export default WeatherItem;
+
+const dynamicStyles = (colors: themeColorsTypes, itemIndex: number) => {
+  const boxSize = measures.responsiveWidth * 0.33;
+
+  return StyleSheet.create({
+    box: {
+      width: boxSize,
+      height: boxSize,
+      backgroundColor: colors.semitransparentBackground,
+      borderRadius: measures.responsiveWidth * 0.05,
+      marginLeft: itemIndex === 0 ? 0 : measures.responsiveWidth * 0.03,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+
+    iconContainer: {
+      width: boxSize,
+      height: boxSize * 0.75,
+    },
+
+    dateText: {
+      color: colors.text,
+      fontSize: measures.fontSize.XS,
+    },
+  });
+};
