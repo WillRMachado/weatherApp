@@ -8,6 +8,7 @@ const initialStore = {
   isLoading: false,
   errorFetchingData: false,
   lastUpdated: undefined,
+  city: undefined,
   current: {
     time: undefined,
     sunrise: undefined,

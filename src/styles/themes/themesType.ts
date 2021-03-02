@@ -8,6 +8,7 @@ export type themeColorsTypes = {
   border: string; //obligatory
   notification: string; //obligatory
 
+  primaryAlternative: string;
   secondary: string;
   tertiary: string;
   semitransparentBackground: string;

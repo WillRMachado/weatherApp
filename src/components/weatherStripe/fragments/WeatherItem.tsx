@@ -4,8 +4,8 @@ import {weatherItemType} from '../../../shared/types/weather';
 import TranslateDate from '../../translate/TranslateDate';
 import {measures} from '../../../styles/index';
 import {useTheme} from '@react-navigation/native';
-import ImageLoader from '../../imageLoader/ImageUriLoader';
 import {themeColorsTypes} from '../../../styles/themes/themesType';
+import ImageLoader from '../../imageLoader/ImageUriLoader';
 import {iconUrl} from '../../../service/weather';
 
 export interface displayItemType {

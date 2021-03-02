@@ -1,5 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {getWeatherOneCall} from '../../../service/weather';
+import {reverseGeocode} from '../../../service/geolocation';
 import {weatherListType} from '../../../shared/types/weather';
 
 const forecastArray: weatherListType = Array(7).fill({
@@ -14,6 +15,7 @@ const weather = createSlice({
     isLoading: false,
     errorFetchingData: false,
     lastUpdated: undefined,
+    city: undefined,
     current: {
       time: undefined,
       sunrise: undefined,
@@ -31,6 +33,9 @@ const weather = createSlice({
     _errorFetchingData(state) {
       state.isLoading = false;
       state.errorFetchingData = true;
+    },
+    saveCityData(state, action: PayloadAction<any>) {
+      state.city = action.payload.address.city;
     },
     saveWeatherData(state, action: PayloadAction<any>) {
       state.lastUpdated = new Date();
@@ -66,20 +71,36 @@ const weather = createSlice({
   },
 });
 
-const asyncGetWeather = (lat: string, lon: string): Function => {
+const asyncFeedLocation = (lat: number, lon: number): Function => {
   return async function (
     dispatch: (arg0: {payload: any; type: string}) => void,
   ) {
     dispatch(_loading());
-    const result = await getWeatherOneCall(lat, lon);
-    if (result.status === 200) {
-      dispatch(saveWeatherData(result.data));
+
+    const apiResults = await Promise.all([
+      getWeatherOneCall(lat, lon),
+      reverseGeocode(lat, lon),
+    ]).then((results) => results);
+
+    const weatherResult = apiResults[0];
+    const reverseGeocodeResult = apiResults[1];
+
+    console.log(reverseGeocodeResult);
+
+    if (weatherResult.status === 200) {
+      dispatch(saveWeatherData(weatherResult.data));
+      dispatch(saveCityData(reverseGeocodeResult.data));
     } else {
       dispatch(_errorFetchingData());
     }
   };
 };
 
-export const {saveWeatherData, _errorFetchingData, _loading} = weather.actions;
-export {asyncGetWeather};
+export const {
+  saveCityData,
+  saveWeatherData,
+  _errorFetchingData,
+  _loading,
+} = weather.actions;
+export {asyncFeedLocation};
 export default weather.reducer;

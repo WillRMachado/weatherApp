@@ -1,96 +1,91 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  PermissionsAndroid,
-  Image,
-} from 'react-native';
+import {View, Text, TouchableOpacity, PermissionsAndroid} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import LinearGradient from 'react-native-linear-gradient';
-
-import {asyncGetWeather} from '../../../store/reducers/weather';
-import {
-  responsiveHeight,
-  responsiveWidth,
-  responsiveFontSize,
-} from 'react-native-responsive-dimensions';
+import Icon from 'react-native-vector-icons/Entypo';
+import {asyncFeedLocation} from '../../../store/reducers/weather';
 import {useTheme} from '@react-navigation/native';
-
 import styles, {measures} from '../../../styles';
-import Geolocation from 'react-native-geolocation-service';
-import Icon from 'react-native-vector-icons/FontAwesome';
-
+import Geolocation, {
+  SuccessCallback,
+  ErrorCallback,
+  GeoPosition,
+} from 'react-native-geolocation-service';
+import {themeColorsTypes} from '../../../styles/themes/themesType';
 import WeatherStripe from '../../../components/weatherStripe/WeatherStripe';
+import MainWeatherIcon from '../../../components/mainWeatherIcon/MainWeatherIcon';
 
-// const aaa = async (params) => {
-//   try {
-//     const granted = await PermissionsAndroid.request(
-//       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-//       // {
-//       //   title: 'Device current location permission',
-//       //   message: 'Allow app to get your current location',
-//       //   buttonNeutral: 'Ask Me Later',
-//       //   buttonNegative: 'Cancel',
-//       //   buttonPositive: 'OK',
-//       // },
-//     );
-//     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-//       Geolocation.getCurrentPosition(
-//         (position) => {
-//           console.log(position);
-//         },
-//         (error) => {
-//           console.log('err', error.code, error.message);
-//         },
-//       );
-//     } else {
-//       console.log('Location permission denied');
-//     }
-//   } catch (err) {
-//     console.warn(err);
-//   }
-// };
-// aaa();
+const getGPSPosition = async (
+  successCallback: SuccessCallback,
+  errorCalback?: ErrorCallback,
+) => {
+  try {
+    const granted = await PermissionsAndroid.request(
+      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+    );
+    if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+      Geolocation.getCurrentPosition(successCallback, (error) => {
+        console.log('err', error.code, error.message);
+      });
+    } else {
+      console.log('Location permission denied');
+    }
+  } catch (err) {
+    console.warn(err);
+  }
+};
 
 const DisplayWeather: React.FunctionComponent = () => {
   const dispatch = useDispatch();
-  // const icon = useSelector((state: any) => state.store.weather.current.icon);
+  const {colors}: themeColorsTypes = useTheme();
+
   const sevenDaysForecast = useSelector(
     (state: any) => state.store.weather.forecast,
   );
-  // console.log(sel);
-  // const {colors, dark} = useTheme();
-  // console.log(sevenDaysForecast);
+  const city = useSelector((state: any) => state.store.weather.city);
+  const mainWeatherIcon = useSelector(
+    (state: any) => state.store.weather.current.main,
+  );
+  const isLoadingWeather = useSelector(
+    (state: any) => state.store.weather.isLoading,
+  );
 
-  // console.log(dark, colors);
-  console.log(sevenDaysForecast.length);
+  const handleGetWeather = async () => {
+    const successGetGPS = (position: GeoPosition) => {
+      dispatch(
+        asyncFeedLocation(position.coords.latitude, position.coords.longitude),
+      );
+    };
+
+    await getGPSPosition(successGetGPS);
+  };
+
   return (
-    <View
-      style={
-        (styles.structure.container,
-        {
-          flexDirection: 'row',
-          height: measures.responsiveHeight,
-          paddingBottom: 20,
-          alignItems: 'flex-end',
-        })
-      }>
-      {/* <TouchableOpacity
-        onPress={() => dispatch(asyncGetWeather('-23.533773', '-46.625290'))}>
-        <Text>display</Text>
-        <Text>display</Text>
-        <Text>display</Text>
-      </TouchableOpacity> */}
-      {/* <Image
-        style={{
-          width: measures.adjustedScreenWidth,
-          height: measures.adjustedScreenHeight,
-        }}
-        resizeMode="contain"
-        source={{uri: `http://openweathermap.org/img/wn/${icon}@2x.png`}}
-      /> */}
-      <WeatherStripe weatherList={sevenDaysForecast} />
+    <View style={styles.structure.screenContainer}>
+      <View style={styles.structure.contentContainer}>
+        <MainWeatherIcon
+          main={mainWeatherIcon}
+          iconSize={measures.fontSize.iconXXL}
+          style={{
+            width: measures.paddingAdjustedScreenWidth,
+            height: measures.paddingAdjustedScreenWidth,
+          }}
+        />
+      </View>
+
+      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <Text>{city}</Text>
+        <TouchableOpacity onPress={handleGetWeather}>
+          <Icon
+            name={isLoadingWeather ? 'rocket' : 'location-pin'}
+            size={measures.fontSize.XL}
+            color={colors.secondary}
+          />
+        </TouchableOpacity>
+      </View>
+
+      <View>
+        <WeatherStripe weatherList={sevenDaysForecast} />
+      </View>
     </View>
   );
 };
