@@ -22,10 +22,11 @@ const fontSize = {
   L: responsiveFontSize(3),
   XL: responsiveFontSize(6),
   XXL: responsiveFontSize(10),
-  iconXXL: responsiveFontSize(40),
+  iconXXL: responsiveFontSize(25),
 };
 
 const measures = {
+  standardPadding: standardPadding,
   responsiveHeight: responsiveHeight(100),
   responsiveWidth: responsiveWidth(100),
   paddingAdjustedScreenHeight:

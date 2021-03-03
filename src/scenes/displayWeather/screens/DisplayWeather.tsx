@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, PermissionsAndroid} from 'react-native';
+import {View, Text, TouchableOpacity, PermissionsAndroid, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import Icon from 'react-native-vector-icons/Entypo';
 import {asyncFeedLocation} from '../../../store/reducers/weather';
 import {useTheme} from '@react-navigation/native';
-import styles, {measures} from '../../../styles';
+import globalStyles, {measures} from '../../../styles';
 import Geolocation, {
   SuccessCallback,
   ErrorCallback,
@@ -13,6 +13,7 @@ import Geolocation, {
 import {themeColorsTypes} from '../../../styles/themes/themesType';
 import WeatherStripe from '../../../components/weatherStripe/WeatherStripe';
 import MainWeatherIcon from '../../../components/mainWeatherIcon/MainWeatherIcon';
+import TranslateText from '../../../components/translate/TranslateText';
 
 const getGPSPosition = async (
   successCallback: SuccessCallback,
@@ -37,6 +38,7 @@ const getGPSPosition = async (
 const DisplayWeather: React.FunctionComponent = () => {
   const dispatch = useDispatch();
   const {colors}: themeColorsTypes = useTheme();
+  const styles = dynamicStyles(colors)
 
   const sevenDaysForecast = useSelector(
     (state: any) => state.store.weather.forecast,
@@ -60,8 +62,24 @@ const DisplayWeather: React.FunctionComponent = () => {
   };
 
   return (
-    <View style={styles.structure.screenContainer}>
-      <View style={styles.structure.contentContainer}>
+    <View style={globalStyles.structure.screenContainer}>
+      <View
+        style={styles.textContainer}>
+        <TranslateText
+          string={`weather.${mainWeatherIcon.toLowerCase()}`}
+          style={styles.textStyle} />
+      </View>
+
+
+
+
+
+
+
+
+
+      
+      <View style={globalStyles.structure.contentContainer}>
         <MainWeatherIcon
           main={mainWeatherIcon}
           iconSize={measures.fontSize.iconXXL}
@@ -72,9 +90,31 @@ const DisplayWeather: React.FunctionComponent = () => {
         />
       </View>
 
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-        <Text>{city}</Text>
-        <TouchableOpacity onPress={handleGetWeather}>
+
+
+
+
+
+      <View
+        style={styles.textContainer}>
+        <Text
+          style={{
+            color: colors.secondary,
+            fontSize: measures.fontSize.L,
+            justifyContent: 'center',
+            flex: 1,
+            borderColor: 'red',
+            textAlign: 'center',
+          }}>
+          {city}
+        </Text>
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            marginLeft:
+              measures.paddingAdjustedScreenWidth - measures.standardPadding,
+          }}
+          onPress={handleGetWeather}>
           <Icon
             name={isLoadingWeather ? 'rocket' : 'location-pin'}
             size={measures.fontSize.XL}
@@ -83,7 +123,27 @@ const DisplayWeather: React.FunctionComponent = () => {
         </TouchableOpacity>
       </View>
 
-      <View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <View
+        style={{
+          paddingBottom: measures.standardPadding,
+        }}>
         <WeatherStripe weatherList={sevenDaysForecast} />
       </View>
     </View>
@@ -91,3 +151,21 @@ const DisplayWeather: React.FunctionComponent = () => {
 };
 
 export default DisplayWeather;
+
+
+const dynamicStyles = (colors):themeColorsTypes => StyleSheet.create({
+  textContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    height: measures.fontSize.XXL,
+    alignItems: 'center',
+  },
+  textStyle: {
+    color: colors.secondary,
+    fontSize: measures.fontSize.L,
+    justifyContent: 'center',
+    flex: 1,
+    borderColor: 'red',
+    textAlign: 'center',
+  },
+});

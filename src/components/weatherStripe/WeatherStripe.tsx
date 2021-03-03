@@ -13,6 +13,7 @@ const weatherStripe = (props: {weatherList: weatherListType}) => {
     <FlatList
       data={weatherList}
       horizontal={true}
+      showsHorizontalScrollIndicator={false}
       renderItem={renderItem}
       keyExtractor={(item) => item.id || item.time.toString()}
     />
