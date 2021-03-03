@@ -1,25 +1,23 @@
 import React from 'react';
 import {
-  View,
   Text,
   TouchableOpacity,
   PermissionsAndroid,
   StyleSheet,
+  View,
 } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import Icon from 'react-native-vector-icons/Entypo';
 import {asyncFeedLocation} from '../../../../store/reducers/weather';
 import {useTheme} from '@react-navigation/native';
-import globalStyles, {measures} from '../../../../styles';
+import {measures} from '../../../../styles';
 import Geolocation, {
   SuccessCallback,
   ErrorCallback,
   GeoPosition,
 } from 'react-native-geolocation-service';
 import {themeColorsTypes} from '../../../../styles/themes/themesType';
-import WeatherStripe from '../../../../components/weatherStripe/WeatherStripe';
-import MainWeatherIcon from '../../../../components/mainWeatherIcon/MainWeatherIcon';
-import TranslateText from '../../../../components/translate/TranslateText';
+import {CircleSnail} from 'react-native-progress';
 
 const getGPSPosition = async (
   successCallback: SuccessCallback,
@@ -46,13 +44,8 @@ export default function LocationStripe() {
   const {colors}: themeColorsTypes = useTheme();
   const styles = dynamicStyles(colors);
 
-  const sevenDaysForecast = useSelector(
-    (state: any) => state.store.weather.forecast,
-  );
   const city = useSelector((state: any) => state.store.weather.city);
-  const mainWeatherIcon = useSelector(
-    (state: any) => state.store.weather.current.main,
-  );
+
   const isLoadingWeather = useSelector(
     (state: any) => state.store.weather.isLoading,
   );
@@ -69,48 +62,37 @@ export default function LocationStripe() {
 
   return (
     <>
-      <Text
-        style={{
-          color: colors.secondary,
-          fontSize: measures.fontSize.L,
-          justifyContent: 'center',
-          flex: 1,
-          borderColor: 'red',
-          textAlign: 'center',
-        }}>
-        {city}
-      </Text>
-      <TouchableOpacity
-        style={{
-          position: 'absolute',
-          marginLeft:
-            measures.paddingAdjustedScreenWidth - measures.standardPadding,
-        }}
-        onPress={handleGetWeather}>
-        <Icon
-          name={isLoadingWeather ? 'rocket' : 'location-pin'}
-          size={measures.fontSize.XL}
-          color={colors.secondary}
-        />
-      </TouchableOpacity>
+      <Text style={styles.textStyle}>{city}</Text>
+
+      <View style={styles.GPSIcon}>
+        {isLoadingWeather ? (
+          <CircleSnail color={colors.secondary} />
+        ) : (
+          <TouchableOpacity onPress={handleGetWeather}>
+            <Icon
+              name={isLoadingWeather ? 'rocket' : 'location-pin'}
+              size={measures.fontSize.XL}
+              color={colors.secondary}
+            />
+          </TouchableOpacity>
+        )}
+      </View>
     </>
   );
 }
 
 const dynamicStyles = (colors: themeColorsTypes) =>
   StyleSheet.create({
-    textContainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      height: measures.fontSize.XXL,
-      alignItems: 'center',
-    },
     textStyle: {
       color: colors.secondary,
       fontSize: measures.fontSize.L,
       justifyContent: 'center',
       flex: 1,
-      borderColor: 'red',
       textAlign: 'center',
+    },
+    GPSIcon: {
+      position: 'absolute',
+      marginLeft:
+        measures.paddingAdjustedScreenWidth - measures.standardPadding,
     },
   });
