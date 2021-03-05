@@ -16,6 +16,7 @@ const time: weatherType = {
   sand: 'Sand',
   ash: 'Ash',
   squall: 'Squall',
+  unableToFind: 'Unable to access your location',
 };
 
 export default time;

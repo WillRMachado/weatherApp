@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {useSelector} from 'react-redux';
 import {useTheme} from '@react-navigation/native';
@@ -8,6 +8,7 @@ import WeatherStripe from '../../../components/weatherStripe/WeatherStripe';
 import MainWeatherIcon from '../../../components/mainWeatherIcon/MainWeatherIcon';
 import TranslateText from '../../../components/translate/TranslateText';
 import LocationStripe from './fragments/LocationStripe';
+import getGPSPosition from '../../../shared/gps/accessGPS';
 
 const DisplayWeather: React.FunctionComponent = () => {
   const {colors}: themeColorsTypes = useTheme();
@@ -20,16 +21,31 @@ const DisplayWeather: React.FunctionComponent = () => {
     (state: any) => state.store.weather.current.main,
   );
 
-  const isLoadingWeather = useSelector(
-    (state: any) => state.store.weather.isLoading,
+  const lastWeatherUpdated = useSelector(
+    (state: any) => state.store.weather.lastUpdated,
   );
+
+  const hasWeatherData = lastWeatherUpdated ? true : false;
+
+  useEffect(() => {
+    getGPSPosition();
+  }, []);
 
   return (
     <View style={globalStyles.structure.screenContainer}>
       <View style={styles.componentContainer}>
         <TranslateText
-          string={`weather.${mainWeatherIcon.toLowerCase()}`}
-          style={styles.currentWeatherText}
+          string={
+            hasWeatherData
+              ? `weather.${mainWeatherIcon.toLowerCase()}`
+              : 'weather.unableToFind'
+          }
+          style={[
+            styles.currentWeatherText,
+            hasWeatherData
+              ? styles.foundWeatherText
+              : styles.notFoundWeatherText,
+          ]}
         />
       </View>
 
@@ -45,12 +61,14 @@ const DisplayWeather: React.FunctionComponent = () => {
         <LocationStripe />
       </View>
 
-      <View
-        style={{
-          paddingBottom: measures.standardPadding,
-        }}>
-        <WeatherStripe weatherList={sevenDaysForecast} />
-      </View>
+      {hasWeatherData && (
+        <View
+          style={{
+            paddingBottom: measures.standardPadding,
+          }}>
+          <WeatherStripe weatherList={sevenDaysForecast} />
+        </View>
+      )}
     </View>
   );
 };
@@ -65,17 +83,24 @@ const dynamicStyles = (colors: themeColorsTypes) =>
     },
     componentContainer: {
       flexDirection: 'row',
-      justifyContent: 'space-between',
       height: measures.fontSize.XXL,
       alignItems: 'center',
     },
     currentWeatherText: {
       color: colors.secondary,
-      fontSize: measures.fontSize.XL,
-      paddingTop: measures.standardPadding,
       justifyContent: 'center',
       flex: 1,
-      borderColor: 'red',
       textAlign: 'center',
+    },
+    foundWeatherText: {
+      fontSize: measures.fontSize.XL,
+      paddingTop: measures.standardPadding,
+    },
+    notFoundWeatherText: {
+      color: colors.secondary,
+      fontSize: measures.fontSize.L,
+      paddingTop: measures.standardPadding * 2,
+      paddingLeft: measures.standardPadding,
+      paddingRight: measures.standardPadding,
     },
   });

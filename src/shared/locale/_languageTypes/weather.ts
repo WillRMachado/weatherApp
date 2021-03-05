@@ -14,4 +14,5 @@ export interface weatherType {
   sand: string;
   ash: string;
   squall: string;
+  unableToFind: string;
 }

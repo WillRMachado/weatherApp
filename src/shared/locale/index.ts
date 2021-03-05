@@ -2,7 +2,6 @@ import RNLocalize from 'react-native-localize';
 import i18n from 'i18n-js';
 import enUS from './enUS';
 // import ptBR from './ptBR';
-// import userOptions from '../../store/index';
 
 const setLocale = () => {
   i18n.translations = {

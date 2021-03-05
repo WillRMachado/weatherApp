@@ -85,8 +85,6 @@ const asyncFeedLocation = (lat: number, lon: number): Function => {
     const weatherResult = apiResults[0];
     const reverseGeocodeResult = apiResults[1];
 
-    console.log(reverseGeocodeResult);
-
     if (weatherResult.status === 200) {
       dispatch(saveWeatherData(weatherResult.data));
       dispatch(saveCityData(reverseGeocodeResult.data));
