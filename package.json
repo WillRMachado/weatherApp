@@ -25,7 +25,6 @@
     "i18n-js": "^3.8.0",
     "install": "^0.13.0",
     "lodash": "^4.17.21",
-    "moment": "^2.29.1",
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-geolocation-service": "^5.2.0",

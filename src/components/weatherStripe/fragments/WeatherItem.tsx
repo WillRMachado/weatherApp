@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {weatherItemType} from '../../../shared/types/weather';
-import TranslateDate from '../../translate/TranslateDate';
+import TranslateWeekday from '../../translate/TranslateWeekday';
 import {measures} from '../../../styles/index';
 import {useTheme} from '@react-navigation/native';
 import {themeColorsTypes} from '../../../styles/themes/themesType';
@@ -24,7 +24,10 @@ const WeatherItem = (props: {weatherUnity: displayItemType}) => {
         imageUri={iconUrl(weatherUnity.item.icon)}
         style={styles.iconContainer}
       />
-      <TranslateDate ms={weatherUnity.item.time} style={styles.dateText} />
+      <TranslateWeekday
+        UTCSeconds={weatherUnity.item.time}
+        style={styles.dateText}
+      />
     </View>
   );
 };
