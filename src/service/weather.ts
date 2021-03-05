@@ -1,4 +1,5 @@
 import {AxiosRequestConfig} from 'axios';
+import ENV from '../../env';
 
 import networkCaller from './client/networkCaller';
 
@@ -7,13 +8,8 @@ const baseUrl = 'https://api.openweathermap.org/data/2.5/';
 const baseIconUrl = 'https://openweathermap.org/img/wn/';
 
 const getWeatherOneCall = async (lat: number, lon: number) => {
-  // this is a free key with limitation on the server
-  //it will be expired before the repo is made public
-  // react-native-dotenv or even an uncommitted json can keep an production key
-  //from being visible in the repo, but will not hide it in an app bundle inspection
-  //or man-in-the-middle attacks
-  //consider using a serverless function for production app
-  const url = `${baseUrl}onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=8d3b580e426bcd05173d38ccf68e2e83&appid=8d3b580e426bcd05173d38ccf68e2e83`;
+  //consider using an user authentication for real-life app
+  const url = `${baseUrl}onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${ENV.OPENWEATHER_API_KEY}`;
   const method = 'get';
 
   const requestData: AxiosRequestConfig = {

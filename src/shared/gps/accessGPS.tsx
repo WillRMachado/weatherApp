@@ -22,14 +22,13 @@ const _getGeoLocation = (
     (error) => {
       console.log('err', error.code, error.message);
     },
+
+    // errorCallback()
     {timeout: 50000},
   );
 };
 
 const _getPermission = async () => {
-  const _getPermissionIOS = async () => {};
-  const _getPermissionAndroid = async () => {};
-
   if (Platform.OS === 'ios') {
     const permission = await Geolocation.requestAuthorization('whenInUse');
     return permission === 'granted' ? true : false;
@@ -56,32 +55,6 @@ const getGPSPosition = async (
   } catch (err) {
     // errorCallback()
   }
-
-  // if (Platform.OS === 'ios') {
-  //   try {
-  //     const granted = await Geolocation.requestAuthorization('whenInUse');
-  //     if (granted === 'granted') {
-  //       _getGeoLocation(successCallback, errorCallback);
-  //     } else {
-  //       // permissionDeniedCallback()
-  //     }
-  //   } catch (err) {
-  //     // errorCallback()
-  //   }
-  // } else {
-  //   try {
-  //     const granted = await PermissionsAndroid.request(
-  //       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-  //     );
-  //     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-  //       _getGeoLocation(successCallback, errorCallback);
-  //     } else {
-  //       // permissionDeniedCallback()
-  //     }
-  //   } catch (err) {
-  //     // errorCallback()
-  //   }
-  // }
 };
 
 export type {GeoPosition as GeoPositionType};

@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import {StyleSheet, View, Animated} from 'react-native';
 import {useTheme} from '@react-navigation/native';
 import {themeColorsTypes} from '../../styles/themes/themesType';

@@ -9,7 +9,6 @@ const setLocale = () => {
     ['en-US']: enUS,
   };
 
-
   i18n.defaultLocale = 'en-US';
   i18n.fallbacks = true;
   i18n.locale =
@@ -30,4 +29,4 @@ const getLocale = () => {
   return i18n.locale;
 };
 
-export { setLocale, changeLocale, translate, getLocale };
+export {setLocale, changeLocale, translate, getLocale};

@@ -63,3 +63,9 @@ buck-out/
 # Jest
 #
 .jest/
+
+
+# ENV
+# 
+env.dev.json
+env.prod.json
