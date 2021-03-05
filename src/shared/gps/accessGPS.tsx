@@ -7,7 +7,7 @@ import Geolocation, {
 import {asyncFeedLocation} from '../../store/reducers/weather/index';
 import redux from '../../store/index';
 
-const successGetGPS = (position: GeoPositionType) => {
+const successGetGPS = (position: GeoPosition) => {
   redux.dispatch(
     asyncFeedLocation(position.coords.latitude, position.coords.longitude),
   );
@@ -15,8 +15,8 @@ const successGetGPS = (position: GeoPositionType) => {
 
 const getGPSPosition = async (
   successCallback: SuccessCallback = successGetGPS,
-  errorCalback?: ErrorCallback,
-  permissionDeniedCalback?: ErrorCallback,
+  errorCallback?: ErrorCallback,
+  permissionDeniedCallback?: ErrorCallback,
 ) => {
   try {
     const granted = await PermissionsAndroid.request(
