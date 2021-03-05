@@ -1,5 +1,4 @@
 import React from 'react';
-import Hello from '../components/_Hello';
 import DisplayWeather from '../scenes/displayWeather/screens/DisplayWeather';
 import HOCWeatherWrapper from '../scenes/displayWeather/HOCWeatherWrapper';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
@@ -14,12 +13,10 @@ const homeNavigator = () => {
         initialRouteName={routes.weather.displayWeather}
         tabBar={() => <></>}
         sceneContainerStyle={{backgroundColor: 'transparent'}}>
-        <Tab.Screen name={'w'} component={Hello} />
         <Tab.Screen
           name={routes.weather.displayWeather}
           component={DisplayWeather}
         />
-        <Tab.Screen name={'w3'} component={Hello} />
       </Tab.Navigator>
     </HOCWeatherWrapper>
   );
