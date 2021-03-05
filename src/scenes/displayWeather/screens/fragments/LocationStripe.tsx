@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TouchableOpacity, StyleSheet, View} from 'react-native';
+import {Text, TouchableOpacity, StyleSheet, View, Animated} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import Icon from 'react-native-vector-icons/Entypo';
 import {asyncFeedLocation} from '../../../../store/reducers/weather';
@@ -14,15 +14,14 @@ import {CircleSnail} from 'react-native-progress';
 export default function LocationStripe() {
   const dispatch = useDispatch();
   const {colors}: themeColorsTypes = useTheme();
-  const styles = dynamicStyles(colors);
-
   const city = useSelector((state: any) => state.store.weather.city);
   const hasCityData = city ? true : false;
-
+  const styles = dynamicStyles(colors);
   const isLoadingWeather = useSelector(
     (state: any) => state.store.weather.isLoading,
   );
 
+  //GPS
   const handleGetWeather = async () => {
     const successGetGPS = (position: GeoPositionType) => {
       dispatch(
@@ -33,6 +32,33 @@ export default function LocationStripe() {
     await getGPSPosition(successGetGPS);
   };
 
+  //Animation
+  const imageOpacity = new Animated.Value(0);
+
+  const initPositionAnim = () => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(imageOpacity, {
+          toValue: 0.6,
+          duration: 300,
+          useNativeDriver: true,
+        }),
+        Animated.timing(imageOpacity, {
+          toValue: 1,
+          duration: 300,
+          useNativeDriver: true,
+        }),
+        Animated.timing(imageOpacity, {
+          toValue: 1,
+          duration: 5000,
+          useNativeDriver: true,
+        }),
+      ]),
+    ).start();
+  };
+
+  initPositionAnim();
+
   return (
     <View style={styles.container}>
       {hasCityData && <Text style={styles.textStyle}>{city}</Text>}
@@ -41,13 +67,18 @@ export default function LocationStripe() {
         {isLoadingWeather ? (
           <CircleSnail color={colors.secondary} />
         ) : (
-          <TouchableOpacity onPress={handleGetWeather}>
-            <Icon
-              name={'location-pin'}
-              size={measures.fontSize.XL}
-              color={colors.secondary}
-            />
-          </TouchableOpacity>
+          <Animated.View
+            style={{
+              opacity: imageOpacity,
+            }}>
+            <TouchableOpacity onPress={handleGetWeather}>
+              <Icon
+                name={'location-pin'}
+                size={measures.fontSize.XL}
+                color={colors.secondary}
+              />
+            </TouchableOpacity>
+          </Animated.View>
         )}
       </View>
     </View>

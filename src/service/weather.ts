@@ -4,7 +4,7 @@ import networkCaller from './client/networkCaller';
 
 // const instance = axiosInstance('https://api.openweathermap.org/data/2.5/');
 const baseUrl = 'https://api.openweathermap.org/data/2.5/';
-const baseIconUrl = 'http://openweathermap.org/img/wn/';
+const baseIconUrl = 'https://openweathermap.org/img/wn/';
 
 const getWeatherOneCall = async (lat: number, lon: number) => {
   // this is a free key with limitation on the server

@@ -1,5 +1,5 @@
-import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import React, {useRef} from 'react';
+import {StyleSheet, View, Animated} from 'react-native';
 import {useTheme} from '@react-navigation/native';
 import {themeColorsTypes} from '../../styles/themes/themesType';
 import Feather from 'react-native-vector-icons/Feather';
@@ -69,10 +69,37 @@ export default function MainWeatherIcon(props: {
     (state: any) => state.store.weather.current.isDark,
   );
 
+  const imageScale = new Animated.Value(1);
+
+  const scale = {
+    transform: [{scale: imageScale}],
+  };
+
+  const initPositionAnim = () => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(imageScale, {
+          toValue: 1.15,
+          duration: 15000,
+          useNativeDriver: true,
+        }),
+        Animated.timing(imageScale, {
+          toValue: 1,
+          duration: 15000,
+          useNativeDriver: true,
+        }),
+      ]),
+    ).start();
+  };
+
+  initPositionAnim();
+
   return (
-    <View style={[styles.defaultStyle, {...style}]}>
-      {getIconComponent(main, iconSize || 90, colors.secondary, isDark)}
-    </View>
+    <Animated.View style={[scale]}>
+      <View style={[styles.defaultStyle, {...style}]}>
+        {getIconComponent(main, iconSize || 90, colors.secondary, isDark)}
+      </View>
+    </Animated.View>
   );
 }
 
