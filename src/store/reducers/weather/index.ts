@@ -2,6 +2,7 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {getWeatherOneCall} from '../../../service/weather';
 import {reverseGeocode} from '../../../service/geolocation';
 import {weatherListType} from '../../../shared/types/weather';
+import {showModal} from '../userData';
 
 const forecastArray: weatherListType = Array(7).fill({
   time: undefined,
@@ -32,6 +33,7 @@ const weather = createSlice({
     },
     _errorFetchingData(state) {
       state.isLoading = false;
+
       state.errorFetchingData = true;
     },
     saveCityData(state, action: PayloadAction<any>) {
@@ -74,9 +76,11 @@ const weather = createSlice({
 const asyncFeedLocation = (lat: number, lon: number): Function => {
   return async function (
     dispatch: (arg0: {payload: any; type: string}) => void,
+    getState: Function,
   ) {
     dispatch(_loading());
 
+    //fetch APIs
     const apiResults = await Promise.all([
       getWeatherOneCall(lat, lon),
       reverseGeocode(lat, lon),
@@ -85,10 +89,30 @@ const asyncFeedLocation = (lat: number, lon: number): Function => {
     const weatherResult = apiResults[0];
     const reverseGeocodeResult = apiResults[1];
 
-    if (weatherResult.status === 200) {
+    //verify api call success
+    if (weatherResult.status === 200 && reverseGeocodeResult.status === 200) {
       dispatch(saveWeatherData(weatherResult.data));
       dispatch(saveCityData(reverseGeocodeResult.data));
     } else {
+      const hasData = getState().store.weather.lastUpdated;
+      hasData
+        ? //error message if previous data is available
+          dispatch(
+            showModal({
+              title: 'modal.weatherApiErrorWithStoredData.title',
+              description: 'modal.weatherApiErrorWithStoredData.description',
+              buttonText: 'modal.weatherApiErrorWithStoredData.buttonText',
+            }),
+          )
+        : //error message if previous data is NOT available
+          dispatch(
+            showModal({
+              title: 'modal.weatherApiError.title',
+              description: 'modal.weatherApiError.description',
+              buttonText: 'modal.weatherApiError.buttonText',
+            }),
+          );
+
       dispatch(_errorFetchingData());
     }
   };

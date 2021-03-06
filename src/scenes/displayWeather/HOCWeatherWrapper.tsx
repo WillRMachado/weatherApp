@@ -1,5 +1,4 @@
 import React from 'react';
-import {View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useTheme} from '@react-navigation/native';
 import {themeColorsTypes} from '../../styles/themes/themesType';
