@@ -12,7 +12,7 @@ modal error
 error loading api
 splash
 icon
-hello component
 language
 tests
-second screen - other places
+second screen - more details
+third screen - other places

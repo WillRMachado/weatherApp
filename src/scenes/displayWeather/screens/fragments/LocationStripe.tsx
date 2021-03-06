@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, TouchableOpacity, StyleSheet, View, Animated} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import Icon from 'react-native-vector-icons/Entypo';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {asyncFeedLocation} from '../../../../store/reducers/weather';
 import {useTheme} from '@react-navigation/native';
 import {measures} from '../../../../styles';
@@ -65,7 +65,7 @@ export default function LocationStripe() {
 
       <View style={hasCityData ? styles.GPSIconSide : styles.GPSIconCenter}>
         {isLoadingWeather ? (
-          <CircleSnail color={colors.secondary} />
+          <CircleSnail size={measures.fontSize.XL} color={colors.secondary} />
         ) : (
           <Animated.View
             style={{
@@ -73,7 +73,10 @@ export default function LocationStripe() {
             }}>
             <TouchableOpacity onPress={handleGetWeather}>
               <Icon
-                name={'location-pin'}
+                name={'refresh'}
+                style={{
+                  transform: [{rotateY: '180deg'}],
+                }}
                 size={measures.fontSize.XL}
                 color={colors.secondary}
               />
@@ -100,7 +103,9 @@ const dynamicStyles = (colors: themeColorsTypes) =>
     GPSIconSide: {
       position: 'absolute',
       marginLeft:
-        measures.paddingAdjustedScreenWidth - measures.standardPadding,
+        measures.responsiveWidth -
+        measures.standardPadding -
+        measures.fontSize.XL,
     },
     GPSIconCenter: {
       flex: 1,

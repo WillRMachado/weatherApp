@@ -25,6 +25,12 @@ const fontSize = {
   iconXXL: responsiveFontSize(25),
 };
 
+const border = {
+  borderWidthStandard: responsiveWidth(100) / 500,
+  borderRadiusStandard: responsiveWidth(100) / 25,
+  borderRadiusDetail: responsiveWidth(100) / 75,
+};
+
 const measures = {
   standardPadding: standardPadding,
   responsiveHeight: responsiveHeight(100),
@@ -33,6 +39,7 @@ const measures = {
     responsiveHeight(100) - standardPadding * 2 - statusBarHeight,
   paddingAdjustedScreenWidth: responsiveWidth(100) - standardPadding * 2,
   fontSize: fontSize,
+  border: border,
 };
 
 const structure = StyleSheet.create({

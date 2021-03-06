@@ -6,6 +6,7 @@ import {Provider} from 'react-redux';
 import reducersStore, {persistor} from './src/store';
 import {useSelector} from 'react-redux';
 import {StatusBar} from 'react-native';
+import CustomModal from './src/components/modal/CustomModal';
 
 import {darkTheme, lightTheme} from './src/styles';
 
@@ -20,6 +21,7 @@ function NavigationWithRedux() {
         backgroundColor={darkTheme.colors.primary}
         hidden={true}
       />
+      <CustomModal />
       <MainNavigator />
     </NavigationContainer>
   );
