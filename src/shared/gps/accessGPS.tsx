@@ -6,6 +6,7 @@ import Geolocation, {
 } from 'react-native-geolocation-service';
 import {asyncFeedLocation} from '../../store/reducers/weather/index';
 import redux from '../../store/index';
+import {showModal} from '../../store/reducers/userData';
 
 const successGetGPS = (position: GeoPosition) => {
   redux.dispatch(
@@ -15,17 +16,11 @@ const successGetGPS = (position: GeoPosition) => {
 
 const _getGeoLocation = (
   successCallback: SuccessCallback = successGetGPS,
-  errorCallback?: ErrorCallback,
+  errorCallback: ErrorCallback,
 ) => {
-  Geolocation.getCurrentPosition(
-    successCallback,
-    (error) => {
-      console.log('err', error.code, error.message);
-    },
-
-    // errorCallback()
-    {timeout: 50000},
-  );
+  Geolocation.getCurrentPosition(successCallback, errorCallback, {
+    timeout: 50000,
+  });
 };
 
 const _getPermission = async () => {
@@ -40,20 +35,30 @@ const _getPermission = async () => {
   }
 };
 
+const showErrorModal = () => {
+  redux.dispatch(
+    showModal({
+      title: 'modal.gpsPermission.title',
+      description: 'modal.gpsPermission.description',
+      buttonText: 'modal.gpsPermission.buttonText',
+    }),
+  );
+};
+
 const getGPSPosition = async (
   successCallback: SuccessCallback = successGetGPS,
-  errorCallback?: ErrorCallback,
-  permissionDeniedCallback?: ErrorCallback,
+  errorCallback: ErrorCallback = showErrorModal,
+  permissionDeniedCallback: ErrorCallback = showErrorModal,
 ) => {
   try {
     const granted = await _getPermission();
     if (granted) {
       _getGeoLocation(successCallback, errorCallback);
     } else {
-      // permissionDeniedCallback()
+      permissionDeniedCallback({code: 0, message: 'permission: ' + granted});
     }
   } catch (err) {
-    // errorCallback()
+    errorCallback({code: 0, message: err});
   }
 };
 

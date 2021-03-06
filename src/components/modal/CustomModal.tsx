@@ -1,35 +1,50 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Modal from 'react-native-modal';
 import {measures} from '../../styles/index';
 import {useTheme} from '@react-navigation/native';
 import PrimaryButton from '../button/PrimaryButton';
 import TranslateText from '../translate/TranslateText';
 import {themeColorsTypes} from '../../styles/themes/themesType';
+import {useSelector, useDispatch} from 'react-redux';
+import {hideModal} from '../../store/reducers/userData';
 
 const CustomModal = () => {
   const {colors}: themeColorsTypes = useTheme();
+  const modalData = useSelector((state: any) => state.store.userData.modal);
+  const dispatch = useDispatch();
+
   const styles = dynamicStyles(colors);
 
   return (
     <Modal
-      isVisible={true}
+      isVisible={modalData.isVisible}
       onBackdropPress={() => {
-        console.log('aaa');
+        dispatch(hideModal());
       }}
       style={styles.modalContainer}>
       <View style={{flex: 1, justifyContent: 'center'}}>
         <View style={styles.modalTitle}>
-          <TranslateText string={'aseasease'} style={styles.modalTitleText} />
+          <TranslateText
+            string={modalData.title}
+            style={styles.modalTitleText}
+          />
         </View>
         <View style={styles.modalContent}>
-          <TranslateText string={'aseasease'} style={styles.modalContentText} />
+          <TranslateText
+            string={modalData.description}
+            style={styles.modalContentText}
+          />
 
           <PrimaryButton
-            text={'texto'}
-            onPress={() => {
-              console.log('btn');
-            }}
+            text={modalData.buttonText}
+            onPress={
+              modalData.buttonAction
+                ? modalData.buttonAction
+                : () => {
+                    dispatch(hideModal());
+                  }
+            }
           />
         </View>
       </View>

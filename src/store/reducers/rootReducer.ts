@@ -1,11 +1,11 @@
 import {combineReducers} from 'redux';
 
 import weatherReducer from './weather';
-import userOptionsReducer from './userOptions';
+import userDataReducer from './userData';
 
 const store = combineReducers({
   weather: weatherReducer,
-  userOptions: userOptionsReducer,
+  userData: userDataReducer,
 });
 
 export default store;
