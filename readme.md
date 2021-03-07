@@ -17,3 +17,4 @@ tests
 second screen - more details
 third screen - other places
 netInfo
+individual error handle for each GPS api

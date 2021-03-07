@@ -9,9 +9,7 @@ import redux from '../../store/index';
 import {showModal} from '../../store/reducers/userData';
 
 const successGetGPS = (position: GeoPosition) => {
-  redux.dispatch(
-    asyncFeedLocation(position.coords.latitude, position.coords.longitude),
-  );
+  redux.dispatch(asyncFeedLocation(60.1188, 24.9714));
 };
 
 const _getGeoLocation = (

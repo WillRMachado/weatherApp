@@ -23,13 +23,7 @@ export default function LocationStripe() {
 
   //GPS
   const handleGetWeather = async () => {
-    const successGetGPS = (position: GeoPositionType) => {
-      dispatch(
-        asyncFeedLocation(position.coords.latitude, position.coords.longitude),
-      );
-    };
-
-    await getGPSPosition(successGetGPS);
+    await getGPSPosition();
   };
 
   //Animation
