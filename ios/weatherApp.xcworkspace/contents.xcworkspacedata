@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:reactNativeTemplate.xcodeproj">
+      location = "group:/Users/jhondoe/Desktop/apps/RN/ios/weatherApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:weatherApp.xcodeproj">
    </FileRef>
 </Workspace>
