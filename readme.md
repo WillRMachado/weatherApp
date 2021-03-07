@@ -77,23 +77,14 @@ Scenes|
                           |-Register
 ```
 
-dev perspective
-user perspective
-flux
-folder structure
-fragments x components
-flipper outdated in react
-api key
-env
+### Roadmap to future updates
 
-
-read-me
-app name
-splash
-icon
-language
-tests
-second screen - more details
-third screen - other places
-netInfo
-individual error handle for each GPS api
+- [ ] Update app packages name for android and ios
+- [ ] Add app splash page
+- [ ] Add app icon
+- [ ] Add app second language and change language menu
+- [ ] Add tests
+- [ ] Add a second screen - more details about current weather
+- [ ] Add a third screen - weather details about other places
+- [ ] Add a [NetInfo](https://www.npmjs.com/package/@react-native-community/netinfo, "Net info package") network interceptors to warn users with no internet
+- [ ] Add Individual error handlers for each GPS api call, allowing WeatherApp to update weather and/or location independently
