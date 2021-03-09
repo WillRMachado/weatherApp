@@ -74,7 +74,7 @@
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|@?react-navigation)"
+      "node_modules/(?!(jest-)?react-native|@?react-navigation|@react-native-community/art)"
     ],
     "setupFiles": [
       "./node_modules/react-native-gesture-handler/jestSetup.js",
