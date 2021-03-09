@@ -10,6 +10,12 @@ Weather app is a hybrid mobile solution built using React Native, it fetches use
 
 To start the weatheApp you will need the standard [React Native development ambient](https://reactnative.dev/docs/environment-setup "React Native Getting Started")
 
+After setup, you can use npm run android for android debug build and npm run ios for iOS debug build
+
+### Tests
+
+Currently tests are being done with Jest, use npm run  tests to start the test interface
+
 ### Flipper
 
 WeatherApp is integrated with [Flipper](https://fbflipper.com/ "Flipper Website") to debug and develop, you may notive that flipper plugins to inspect redux are already installed
@@ -79,11 +85,11 @@ Scenes|
 
 ### Roadmap to future updates
 
-- [ ] Update app packages name for android and ios
+- [X] Update app packages name for android and ios
 - [ ] Add app splash page
 - [ ] Add app icon
 - [ ] Add app second language and change language menu
-- [ ] Add tests
+- [ ] Add tests for translations, screens, shared and modal
 - [ ] Add a second screen - more details about current weather
 - [ ] Add a third screen - weather details about other places
 - [ ] Add a [NetInfo](https://www.npmjs.com/package/@react-native-community/netinfo, "Net info package") network interceptors to warn users with no internet
