@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* reactNativeTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reactNativeTemplateTests.m */; };
+		00E356F31AD99517003FC87E /* weatherAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* weatherAppTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		257D24BCB816AC54D8148123 /* libPods-reactNativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46684CA5ADFD38E748B137DD /* libPods-reactNativeTemplate.a */; };
+		257D24BCB816AC54D8148123 /* libPods-weatherApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46684CA5ADFD38E748B137DD /* libPods-weatherApp.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* reactNativeTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reactNativeTemplateTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* weatherAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* weatherAppTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		9EFD6A6E8D478EE460AF9067 /* libPods-reactNativeTemplate-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7217D9C8F067B20D0E29848D /* libPods-reactNativeTemplate-tvOS.a */; };
-		E90E3BC54BC1EDB19BAA6C8D /* libPods-reactNativeTemplate-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA76B55774CBBA1C37A71621 /* libPods-reactNativeTemplate-tvOSTests.a */; };
-		F3C539A685FBE21900892BED /* libPods-reactNativeTemplate-reactNativeTemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD248976FCBD6911DD8CD41 /* libPods-reactNativeTemplate-reactNativeTemplateTests.a */; };
+		9EFD6A6E8D478EE460AF9067 /* libPods-weatherApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7217D9C8F067B20D0E29848D /* libPods-weatherApp-tvOS.a */; };
+		E90E3BC54BC1EDB19BAA6C8D /* libPods-weatherApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA76B55774CBBA1C37A71621 /* libPods-weatherApp-tvOSTests.a */; };
+		F3C539A685FBE21900892BED /* libPods-weatherApp-weatherAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD248976FCBD6911DD8CD41 /* libPods-weatherApp-weatherAppTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,45 +28,45 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = reactNativeTemplate;
+			remoteInfo = weatherApp;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "reactNativeTemplate-tvOS";
+			remoteInfo = "weatherApp-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* reactNativeTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reactNativeTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* weatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* reactNativeTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reactNativeTemplateTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* reactNativeTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reactNativeTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = reactNativeTemplate/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = reactNativeTemplate/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = reactNativeTemplate/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reactNativeTemplate/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = reactNativeTemplate/main.m; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* reactNativeTemplate-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "reactNativeTemplate-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* reactNativeTemplate-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "reactNativeTemplate-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4394DE9A74B3E70B91131D0E /* Pods-reactNativeTemplate-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTemplate-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeTemplate-tvOSTests/Pods-reactNativeTemplate-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		46684CA5ADFD38E748B137DD /* libPods-reactNativeTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		62BA5B726BAF280CEFCF9775 /* Pods-reactNativeTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTemplate.release.xcconfig"; path = "Target Support Files/Pods-reactNativeTemplate/Pods-reactNativeTemplate.release.xcconfig"; sourceTree = "<group>"; };
-		6DD248976FCBD6911DD8CD41 /* libPods-reactNativeTemplate-reactNativeTemplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeTemplate-reactNativeTemplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		71E10E69369BE15D4113CD0F /* Pods-reactNativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeTemplate/Pods-reactNativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
-		7217D9C8F067B20D0E29848D /* libPods-reactNativeTemplate-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeTemplate-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7763218BA666D1AD825331A9 /* Pods-reactNativeTemplate-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTemplate-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeTemplate-tvOS/Pods-reactNativeTemplate-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = reactNativeTemplate/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AA6FC2F610EEB0782634F763 /* Pods-reactNativeTemplate-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTemplate-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-reactNativeTemplate-tvOSTests/Pods-reactNativeTemplate-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		C48CE661484C703BA080B350 /* Pods-reactNativeTemplate-reactNativeTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTemplate-reactNativeTemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeTemplate-reactNativeTemplateTests/Pods-reactNativeTemplate-reactNativeTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DA55CEF0531C891E6B4A710E /* Pods-reactNativeTemplate-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTemplate-tvOS.release.xcconfig"; path = "Target Support Files/Pods-reactNativeTemplate-tvOS/Pods-reactNativeTemplate-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		EA76B55774CBBA1C37A71621 /* libPods-reactNativeTemplate-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeTemplate-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F21AD99517003FC87E /* weatherAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = weatherAppTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* weatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = weatherApp/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = weatherApp/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = weatherApp/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = weatherApp/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = weatherApp/main.m; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* weatherApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weatherApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* weatherApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "weatherApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4394DE9A74B3E70B91131D0E /* Pods-weatherApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-weatherApp-tvOSTests/Pods-weatherApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		46684CA5ADFD38E748B137DD /* libPods-weatherApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weatherApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62BA5B726BAF280CEFCF9775 /* Pods-weatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherApp.release.xcconfig"; path = "Target Support Files/Pods-weatherApp/Pods-weatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		6DD248976FCBD6911DD8CD41 /* libPods-weatherApp-weatherAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weatherApp-weatherAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71E10E69369BE15D4113CD0F /* Pods-weatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherApp.debug.xcconfig"; path = "Target Support Files/Pods-weatherApp/Pods-weatherApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7217D9C8F067B20D0E29848D /* libPods-weatherApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weatherApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7763218BA666D1AD825331A9 /* Pods-weatherApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-weatherApp-tvOS/Pods-weatherApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = weatherApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA6FC2F610EEB0782634F763 /* Pods-weatherApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-weatherApp-tvOSTests/Pods-weatherApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		C48CE661484C703BA080B350 /* Pods-weatherApp-weatherAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherApp-weatherAppTests.debug.xcconfig"; path = "Target Support Files/Pods-weatherApp-weatherAppTests/Pods-weatherApp-weatherAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA55CEF0531C891E6B4A710E /* Pods-weatherApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-weatherApp-tvOS/Pods-weatherApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		EA76B55774CBBA1C37A71621 /* libPods-weatherApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weatherApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		FFF2659D97D122208192B85E /* Pods-reactNativeTemplate-reactNativeTemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTemplate-reactNativeTemplateTests.release.xcconfig"; path = "Target Support Files/Pods-reactNativeTemplate-reactNativeTemplateTests/Pods-reactNativeTemplate-reactNativeTemplateTests.release.xcconfig"; sourceTree = "<group>"; };
+		FFF2659D97D122208192B85E /* Pods-weatherApp-weatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherApp-weatherAppTests.release.xcconfig"; path = "Target Support Files/Pods-weatherApp-weatherAppTests/Pods-weatherApp-weatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3C539A685FBE21900892BED /* libPods-reactNativeTemplate-reactNativeTemplateTests.a in Frameworks */,
+				F3C539A685FBE21900892BED /* libPods-weatherApp-weatherAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257D24BCB816AC54D8148123 /* libPods-reactNativeTemplate.a in Frameworks */,
+				257D24BCB816AC54D8148123 /* libPods-weatherApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EFD6A6E8D478EE460AF9067 /* libPods-reactNativeTemplate-tvOS.a in Frameworks */,
+				9EFD6A6E8D478EE460AF9067 /* libPods-weatherApp-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E90E3BC54BC1EDB19BAA6C8D /* libPods-reactNativeTemplate-tvOSTests.a in Frameworks */,
+				E90E3BC54BC1EDB19BAA6C8D /* libPods-weatherApp-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* reactNativeTemplateTests */ = {
+		00E356EF1AD99517003FC87E /* weatherAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* reactNativeTemplateTests.m */,
+				00E356F21AD99517003FC87E /* weatherAppTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = reactNativeTemplateTests;
+			path = weatherAppTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -125,20 +125,19 @@
 		10D286915D1BF7CE194C97BC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				71E10E69369BE15D4113CD0F /* Pods-reactNativeTemplate.debug.xcconfig */,
-				62BA5B726BAF280CEFCF9775 /* Pods-reactNativeTemplate.release.xcconfig */,
-				C48CE661484C703BA080B350 /* Pods-reactNativeTemplate-reactNativeTemplateTests.debug.xcconfig */,
-				FFF2659D97D122208192B85E /* Pods-reactNativeTemplate-reactNativeTemplateTests.release.xcconfig */,
-				7763218BA666D1AD825331A9 /* Pods-reactNativeTemplate-tvOS.debug.xcconfig */,
-				DA55CEF0531C891E6B4A710E /* Pods-reactNativeTemplate-tvOS.release.xcconfig */,
-				4394DE9A74B3E70B91131D0E /* Pods-reactNativeTemplate-tvOSTests.debug.xcconfig */,
-				AA6FC2F610EEB0782634F763 /* Pods-reactNativeTemplate-tvOSTests.release.xcconfig */,
+				71E10E69369BE15D4113CD0F /* Pods-weatherApp.debug.xcconfig */,
+				62BA5B726BAF280CEFCF9775 /* Pods-weatherApp.release.xcconfig */,
+				C48CE661484C703BA080B350 /* Pods-weatherApp-weatherAppTests.debug.xcconfig */,
+				FFF2659D97D122208192B85E /* Pods-weatherApp-weatherAppTests.release.xcconfig */,
+				7763218BA666D1AD825331A9 /* Pods-weatherApp-tvOS.debug.xcconfig */,
+				DA55CEF0531C891E6B4A710E /* Pods-weatherApp-tvOS.release.xcconfig */,
+				4394DE9A74B3E70B91131D0E /* Pods-weatherApp-tvOSTests.debug.xcconfig */,
+				AA6FC2F610EEB0782634F763 /* Pods-weatherApp-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* reactNativeTemplate */ = {
+		13B07FAE1A68108700A75B9A /* weatherApp */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -149,7 +148,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = reactNativeTemplate;
+			name = weatherApp;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -157,10 +156,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				46684CA5ADFD38E748B137DD /* libPods-reactNativeTemplate.a */,
-				6DD248976FCBD6911DD8CD41 /* libPods-reactNativeTemplate-reactNativeTemplateTests.a */,
-				7217D9C8F067B20D0E29848D /* libPods-reactNativeTemplate-tvOS.a */,
-				EA76B55774CBBA1C37A71621 /* libPods-reactNativeTemplate-tvOSTests.a */,
+				46684CA5ADFD38E748B137DD /* libPods-weatherApp.a */,
+				6DD248976FCBD6911DD8CD41 /* libPods-weatherApp-weatherAppTests.a */,
+				7217D9C8F067B20D0E29848D /* libPods-weatherApp-tvOS.a */,
+				EA76B55774CBBA1C37A71621 /* libPods-weatherApp-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,9 +174,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* reactNativeTemplate */,
+				13B07FAE1A68108700A75B9A /* weatherApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* reactNativeTemplateTests */,
+				00E356EF1AD99517003FC87E /* weatherAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				10D286915D1BF7CE194C97BC /* Pods */,
@@ -191,10 +190,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* reactNativeTemplate.app */,
-				00E356EE1AD99517003FC87E /* reactNativeTemplateTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* reactNativeTemplate-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* reactNativeTemplate-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* weatherApp.app */,
+				00E356EE1AD99517003FC87E /* weatherAppTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* weatherApp-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* weatherApp-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,15 +203,14 @@
 			children = (
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* reactNativeTemplateTests */ = {
+		00E356ED1AD99517003FC87E /* weatherAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "reactNativeTemplateTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "weatherAppTests" */;
 			buildPhases = (
 				62091D711B57C4B4E04B37DD /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -226,14 +224,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = reactNativeTemplateTests;
-			productName = reactNativeTemplateTests;
-			productReference = 00E356EE1AD99517003FC87E /* reactNativeTemplateTests.xctest */;
+			name = weatherAppTests;
+			productName = weatherAppTests;
+			productReference = 00E356EE1AD99517003FC87E /* weatherAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* reactNativeTemplate */ = {
+		13B07F861A680F5B00A75B9A /* weatherApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "reactNativeTemplate" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "weatherApp" */;
 			buildPhases = (
 				5699EED89D9D008A62706F49 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -248,14 +246,14 @@
 			);
 			dependencies = (
 			);
-			name = reactNativeTemplate;
-			productName = reactNativeTemplate;
-			productReference = 13B07F961A680F5B00A75B9A /* reactNativeTemplate.app */;
+			name = weatherApp;
+			productName = weatherApp;
+			productReference = 13B07F961A680F5B00A75B9A /* weatherApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* reactNativeTemplate-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* weatherApp-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "reactNativeTemplate-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "weatherApp-tvOS" */;
 			buildPhases = (
 				8999A7EF51B0C240DE541DDD /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -269,14 +267,14 @@
 			);
 			dependencies = (
 			);
-			name = "reactNativeTemplate-tvOS";
-			productName = "reactNativeTemplate-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* reactNativeTemplate-tvOS.app */;
+			name = "weatherApp-tvOS";
+			productName = "weatherApp-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* weatherApp-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* reactNativeTemplate-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* weatherApp-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "reactNativeTemplate-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "weatherApp-tvOSTests" */;
 			buildPhases = (
 				6FFF3D546447DEA98D38970A /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -288,9 +286,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "reactNativeTemplate-tvOSTests";
-			productName = "reactNativeTemplate-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* reactNativeTemplate-tvOSTests.xctest */;
+			name = "weatherApp-tvOSTests";
+			productName = "weatherApp-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* weatherApp-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -319,7 +317,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "reactNativeTemplate" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "weatherApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -332,10 +330,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* reactNativeTemplate */,
-				00E356ED1AD99517003FC87E /* reactNativeTemplateTests */,
-				2D02E47A1E0B4A5D006451C7 /* reactNativeTemplate-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* reactNativeTemplate-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* weatherApp */,
+				00E356ED1AD99517003FC87E /* weatherAppTests */,
+				2D02E47A1E0B4A5D006451C7 /* weatherApp-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* weatherApp-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -395,7 +393,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reactNativeTemplate/Pods-reactNativeTemplate-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-weatherApp/Pods-weatherApp-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -436,7 +434,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactNativeTemplate/Pods-reactNativeTemplate-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-weatherApp/Pods-weatherApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
@@ -459,7 +457,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reactNativeTemplate/Pods-reactNativeTemplate-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-weatherApp/Pods-weatherApp-frameworks.sh",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -468,7 +466,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactNativeTemplate/Pods-reactNativeTemplate-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-weatherApp/Pods-weatherApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		48B63220F8F71AD5730AE083 /* [CP] Copy Pods Resources */ = {
@@ -477,7 +475,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reactNativeTemplate-reactNativeTemplateTests/Pods-reactNativeTemplate-reactNativeTemplateTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-weatherApp-weatherAppTests/Pods-weatherApp-weatherAppTests-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -518,7 +516,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactNativeTemplate-reactNativeTemplateTests/Pods-reactNativeTemplate-reactNativeTemplateTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-weatherApp-weatherAppTests/Pods-weatherApp-weatherAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5699EED89D9D008A62706F49 /* [CP] Check Pods Manifest.lock */ = {
@@ -536,7 +534,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-reactNativeTemplate-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-weatherApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -549,7 +547,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reactNativeTemplate-reactNativeTemplateTests/Pods-reactNativeTemplate-reactNativeTemplateTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-weatherApp-weatherAppTests/Pods-weatherApp-weatherAppTests-frameworks.sh",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -558,7 +556,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactNativeTemplate-reactNativeTemplateTests/Pods-reactNativeTemplate-reactNativeTemplateTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-weatherApp-weatherAppTests/Pods-weatherApp-weatherAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		62091D711B57C4B4E04B37DD /* [CP] Check Pods Manifest.lock */ = {
@@ -576,7 +574,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-reactNativeTemplate-reactNativeTemplateTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-weatherApp-weatherAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -589,7 +587,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reactNativeTemplate-tvOS/Pods-reactNativeTemplate-tvOS-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-weatherApp-tvOS/Pods-weatherApp-tvOS-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -630,7 +628,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reactNativeTemplate-tvOS/Pods-reactNativeTemplate-tvOS-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-weatherApp-tvOS/Pods-weatherApp-tvOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6FFF3D546447DEA98D38970A /* [CP] Check Pods Manifest.lock */ = {
@@ -648,7 +646,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-reactNativeTemplate-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-weatherApp-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -670,7 +668,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-reactNativeTemplate-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-weatherApp-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -722,7 +720,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* reactNativeTemplateTests.m in Sources */,
+				00E356F31AD99517003FC87E /* weatherAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,7 +746,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* reactNativeTemplateTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* weatherAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,12 +755,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* reactNativeTemplate */;
+			target = 13B07F861A680F5B00A75B9A /* weatherApp */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* reactNativeTemplate-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* weatherApp-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -770,14 +768,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C48CE661484C703BA080B350 /* Pods-reactNativeTemplate-reactNativeTemplateTests.debug.xcconfig */;
+			baseConfigurationReference = C48CE661484C703BA080B350 /* Pods-weatherApp-weatherAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = reactNativeTemplateTests/Info.plist;
+				INFOPLIST_FILE = weatherAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -787,17 +785,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactNativeTemplate.app/reactNativeTemplate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weatherApp.app/weatherApp";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFF2659D97D122208192B85E /* Pods-reactNativeTemplate-reactNativeTemplateTests.release.xcconfig */;
+			baseConfigurationReference = FFF2659D97D122208192B85E /* Pods-weatherApp-weatherAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = reactNativeTemplateTests/Info.plist;
+				INFOPLIST_FILE = weatherAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -807,19 +805,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactNativeTemplate.app/reactNativeTemplate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weatherApp.app/weatherApp";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71E10E69369BE15D4113CD0F /* Pods-reactNativeTemplate.debug.xcconfig */;
+			baseConfigurationReference = 71E10E69369BE15D4113CD0F /* Pods-weatherApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = reactNativeTemplate/Info.plist;
+				INFOPLIST_FILE = weatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -827,7 +825,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = reactNativeTemplate;
+				PRODUCT_NAME = weatherApp;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -836,12 +834,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62BA5B726BAF280CEFCF9775 /* Pods-reactNativeTemplate.release.xcconfig */;
+			baseConfigurationReference = 62BA5B726BAF280CEFCF9775 /* Pods-weatherApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = reactNativeTemplate/Info.plist;
+				INFOPLIST_FILE = weatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -849,7 +847,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = reactNativeTemplate;
+				PRODUCT_NAME = weatherApp;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -857,7 +855,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7763218BA666D1AD825331A9 /* Pods-reactNativeTemplate-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 7763218BA666D1AD825331A9 /* Pods-weatherApp-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -868,14 +866,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "reactNativeTemplate-tvOS/Info.plist";
+				INFOPLIST_FILE = "weatherApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.reactNativeTemplate-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.weatherApp-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -885,7 +883,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA55CEF0531C891E6B4A710E /* Pods-reactNativeTemplate-tvOS.release.xcconfig */;
+			baseConfigurationReference = DA55CEF0531C891E6B4A710E /* Pods-weatherApp-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -896,14 +894,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "reactNativeTemplate-tvOS/Info.plist";
+				INFOPLIST_FILE = "weatherApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.reactNativeTemplate-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.weatherApp-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -913,7 +911,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4394DE9A74B3E70B91131D0E /* Pods-reactNativeTemplate-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 4394DE9A74B3E70B91131D0E /* Pods-weatherApp-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -923,24 +921,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "reactNativeTemplate-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "weatherApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.reactNativeTemplate-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.weatherApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactNativeTemplate-tvOS.app/reactNativeTemplate-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weatherApp-tvOS.app/weatherApp-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA6FC2F610EEB0782634F763 /* Pods-reactNativeTemplate-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = AA6FC2F610EEB0782634F763 /* Pods-weatherApp-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -950,17 +948,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "reactNativeTemplate-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "weatherApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.reactNativeTemplate-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.weatherApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactNativeTemplate-tvOS.app/reactNativeTemplate-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weatherApp-tvOS.app/weatherApp-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1081,7 +1079,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "reactNativeTemplateTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "weatherAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1090,7 +1088,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "reactNativeTemplate" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "weatherApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1099,7 +1097,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "reactNativeTemplate-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "weatherApp-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1108,7 +1106,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "reactNativeTemplate-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "weatherApp-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1117,7 +1115,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "reactNativeTemplate" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "weatherApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

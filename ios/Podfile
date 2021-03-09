@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '10.0'
 pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-target 'reactNativeTemplate' do
+target 'weatherApp' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
@@ -12,7 +12,7 @@ target 'reactNativeTemplate' do
 
   pod 'ReactNativeART', :path => '../node_modules/@react-native-community/art'
 
-  target 'reactNativeTemplateTests' do
+  target 'weatherAppTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -28,10 +28,10 @@ target 'reactNativeTemplate' do
   end
 end
 
-target 'reactNativeTemplate-tvOS' do
-  # Pods for reactNativeTemplate-tvOS
+target 'weatherApp-tvOS' do
+  # Pods for weatherApp-tvOS
 
-  target 'reactNativeTemplate-tvOSTests' do
+  target 'weatherApp-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
