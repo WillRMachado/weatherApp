@@ -1,0 +1,77 @@
+[
+  {
+    "weatherName": "Thunderstorm",
+    "iconsFamily": "Feather",
+    "iconName": "cloud-lightning"
+  },
+  {
+    "weatherName": "Drizzle",
+    "iconsFamily": "Feather",
+    "iconName": "cloud-drizzle"
+  },
+  {
+    "weatherName": "Rain",
+    "iconsFamily": "Feather",
+    "iconName": "cloud-rain"
+  },
+  {
+    "weatherName": "Snow",
+    "iconsFamily": "Feather",
+    "iconName": "cloud-snow"
+  },
+  {
+    "weatherName": "Tornado",
+    "iconsFamily": "MaterialCommunityIcons",
+    "iconName": "weather-tornado"
+  },
+  {
+    "weatherName": "Clear",
+    "iconsFamily": "Feather",
+    "iconName": "moon"
+  },
+  {
+    "weatherName": "Clouds",
+    "iconsFamily": "Feather",
+    "iconName": "cloud"
+  },
+  {
+    "weatherName": "Mist",
+    "iconsFamily": "MaterialCommunityIcons",
+    "iconName": "weather-fog"
+  },
+  {
+    "weatherName": "Smoke",
+    "iconsFamily": "MaterialCommunityIcons",
+    "iconName": "weather-fog"
+  },
+  {
+    "weatherName": "Haze",
+    "iconsFamily": "MaterialCommunityIcons",
+    "iconName": "weather-fog"
+  },
+  {
+    "weatherName": "Dust",
+    "iconsFamily": "MaterialCommunityIcons",
+    "iconName": "weather-fog"
+  },
+  {
+    "weatherName": "Fog",
+    "iconsFamily": "MaterialCommunityIcons",
+    "iconName": "weather-fog"
+  },
+  {
+    "weatherName": "Sand",
+    "iconsFamily": "MaterialCommunityIcons",
+    "iconName": "weather-fog"
+  },
+  {
+    "weatherName": "Ash",
+    "iconsFamily": "MaterialCommunityIcons",
+    "iconName": "weather-fog"
+  },
+  {
+    "weatherName": "Squall",
+    "iconsFamily": "MaterialCommunityIcons",
+    "iconName": "weather-fog"
+  }
+]

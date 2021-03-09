@@ -25,18 +25,19 @@ const CustomModal = () => {
       style={styles.modalContainer}>
       <View style={{flex: 1, justifyContent: 'center'}}>
         <View style={styles.modalTitle}>
+          {console.log('aaaaaaaaaaaaaaaaaaaaa', modalData)}
           <TranslateText
             string={modalData.title}
             style={styles.modalTitleText}
           />
         </View>
         <View style={styles.modalContent}>
-          <TranslateText
+          {/* <TranslateText
             string={modalData.description}
             style={styles.modalContentText}
-          />
+          /> */}
 
-          <PrimaryButton
+          {/* <PrimaryButton
             text={modalData.buttonText}
             onPress={
               modalData.buttonAction
@@ -45,7 +46,7 @@ const CustomModal = () => {
                     dispatch(hideModal());
                   }
             }
-          />
+          /> */}
         </View>
       </View>
     </Modal>
